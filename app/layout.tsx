@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
+import { StarsCanvas } from "@/components/main/star-background";
 import { cn } from "@/lib/utils";
 
 import "./globals.css";
@@ -25,6 +26,7 @@ export default function RootLayout({
           inter.className
         )}
       >
+        <StarsCanvas />
         {children}
       </body>
     </html>
