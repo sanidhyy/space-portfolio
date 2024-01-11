@@ -2,13 +2,13 @@
 
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 import {
   slideInFromLeft,
   slideInFromRight,
   slideInFromTop,
 } from "@/lib/motion";
-import Image from "next/image";
 
 export const HeroContent = () => {
   return (
