@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
+import { Footer } from "@/components/main/footer";
 import { Navbar } from "@/components/main/navbar";
 import { StarsCanvas } from "@/components/main/star-background";
 import { cn } from "@/lib/utils";
@@ -30,6 +31,7 @@ export default function RootLayout({
         <StarsCanvas />
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
