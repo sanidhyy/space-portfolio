@@ -18,7 +18,7 @@ export const SkillText = () => {
       >
         <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
         <h1 className="Welcome-text text-[13px]">
-          Thing better with Next.js 14
+          Think better with Next.js 14
         </h1>
       </motion.div>
 
