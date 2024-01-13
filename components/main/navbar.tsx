@@ -49,19 +49,14 @@ export const Navbar = () => {
         </div>
 
         <div className="flex flex-row gap-5">
-          {SOCIALS.map((social) => (
+          {SOCIALS.map(({ link, name, icon: Icon }) => (
             <Link
-              href={social.link}
+              href={link}
               target="_blank"
               rel="noreferrer noopener"
-              key={social.name}
+              key={name}
             >
-              <Image
-                src={social.src}
-                alt={social.name}
-                width={24}
-                height={24}
-              />
+              <Icon className="h-6 w-6 text-white" />
             </Link>
           ))}
         </div>

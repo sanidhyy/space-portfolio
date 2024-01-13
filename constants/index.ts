@@ -1,4 +1,4 @@
-import { FaYoutube } from "react-icons/fa";
+import { FaYoutube, FaFacebook } from "react-icons/fa";
 import {
   RxDiscordLogo,
   RxGithubLogo,
@@ -91,17 +91,17 @@ export const SKILL_DATA = [
 export const SOCIALS = [
   {
     name: "Instagram",
-    src: "/instagram.svg",
+    icon: RxInstagramLogo,
     link: "https://instagram.com",
   },
   {
     name: "Facebook",
-    src: "/facebook.svg",
+    icon: FaFacebook,
     link: "https://facebook.com",
   },
   {
     name: "Twitter",
-    src: "/twitter.svg",
+    icon: RxTwitterLogo,
     link: "https://twitter.com",
   },
 ] as const;
@@ -360,5 +360,5 @@ export const NAV_LINKS = [
 ] as const;
 
 export const LINKS = {
-  sourceCode: "https://github.com/sanidhyy/space-portfolio"
-}
+  sourceCode: "https://github.com/sanidhyy/space-portfolio",
+};
