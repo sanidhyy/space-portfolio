@@ -343,3 +343,22 @@ export const FOOTER_DATA = [
     ],
   },
 ] as const;
+
+export const NAV_LINKS = [
+  {
+    title: "About me",
+    link: "#about-me",
+  },
+  {
+    title: "Skills",
+    link: "#skills",
+  },
+  {
+    title: "Projects",
+    link: "#projects",
+  },
+] as const;
+
+export const LINKS = {
+  sourceCode: "https://github.com/sanidhyy/space-portfolio"
+}

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { SOCIALS } from "@/constants";
+import { LINKS, NAV_LINKS, SOCIALS } from "@/constants";
 
 export const Navbar = () => {
   return (
@@ -26,23 +26,24 @@ export const Navbar = () => {
 
         <div className="w-[500px] h-full flex flex-row items-center justify-between md:mr-20">
           <div className="flex items-center justify-between w-full h-auto border-[rgba(112,66,248,0.38)] bg-[rgba(3,0,20,0.37)] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.title}
+                href={link.link}
+                className="cursor-pointer hover:text-[rgb(112,66,248)] transition"
+              >
+                {link.title}
+              </Link>
+            ))}
+
+            {/* source code */}
             <Link
-              href="#about-me"
+              href={LINKS.sourceCode}
+              target="_blank"
+              rel="noreferrer noopener"
               className="cursor-pointer hover:text-[rgb(112,66,248)] transition"
             >
-              About me
-            </Link>
-            <Link
-              href="#skills"
-              className="cursor-pointer hover:text-[rgb(112,66,248)] transition"
-            >
-              Skills
-            </Link>
-            <Link
-              href="#projects"
-              className="cursor-pointer hover:text-[rgb(112,66,248)] transition"
-            >
-              Projects
+              Source Code
             </Link>
           </div>
         </div>
