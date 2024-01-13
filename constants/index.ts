@@ -1,3 +1,12 @@
+import { FaYoutube } from "react-icons/fa";
+import {
+  RxDiscordLogo,
+  RxGithubLogo,
+  RxInstagramLogo,
+  RxTwitterLogo,
+  RxLinkedinLogo,
+} from "react-icons/rx";
+
 export const SKILL_DATA = [
   {
     skill_name: "Html 5",
@@ -269,5 +278,68 @@ export const PROJECTS = [
       'Embark on an interstellar journey with my "Space Themed Website", a mesmerizing space-themed website that invites you to explore the cosmic wonders beyond our world. Immerse yourself in an awe-inspiring digital experience that blends cutting-edge design with the mysteries of the universe.',
     image: "/project-3.png",
     link: "https://example.com",
+  },
+] as const;
+
+export const FOOTER_DATA = [
+  {
+    title: "Community",
+    data: [
+      {
+        name: "YouTube",
+        icon: FaYoutube,
+        link: "https://youtube.com",
+      },
+      {
+        name: "GitHub",
+        icon: RxGithubLogo,
+        link: "https://github.com",
+      },
+      {
+        name: "Discord",
+        icon: RxDiscordLogo,
+        link: "https://discord.com",
+      },
+    ],
+  },
+  {
+    title: "Social Media",
+    data: [
+      {
+        name: "Instagram",
+        icon: RxInstagramLogo,
+        link: "https://instagram.com",
+      },
+      {
+        name: "Twitter",
+        icon: RxTwitterLogo,
+        link: "https://twitter.com",
+      },
+      {
+        name: "Linkedin",
+        icon: RxLinkedinLogo,
+        link: "https://linkedin.com",
+      },
+    ],
+  },
+  {
+    title: "About",
+    data: [
+      {
+        name: "Become Sponsor",
+        icon: null,
+        link: "https://youtube.com",
+      },
+      {
+        name: "Learning about me",
+        icon: null,
+        link: "https://example.com",
+      },
+      {
+        name: "Contact Me",
+        icon: null,
+        link: "mailto:contact@example.com",
+      },
+    ],
   },
 ] as const;
