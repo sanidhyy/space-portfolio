@@ -12,7 +12,7 @@ export const Navbar = () => {
           className="h-auto w-auto flex flex-row items-center"
         >
           <Image
-            src="/NavLogo.png"
+            src="/logo.png"
             alt="Logo"
             width={70}
             height={70}
@@ -24,14 +24,23 @@ export const Navbar = () => {
         </Link>
 
         <div className="w-[500px] h-full flex flex-row items-center justify-between md:mr-20">
-          <div className="flex items-center justify-between w-full h-auto border-[#7042F861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
-            <Link href="#about-me" className="cursor-pointer">
+          <div className="flex items-center justify-between w-full h-auto border-[rgba(112,66,248,0.38)] bg-[rgba(3,0,20,0.37)] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
+            <Link
+              href="#about-me"
+              className="cursor-pointer hover:text-[rgb(112,66,248)] transition"
+            >
               About me
             </Link>
-            <Link href="#skills" className="cursor-pointer">
+            <Link
+              href="#skills"
+              className="cursor-pointer hover:text-[rgb(112,66,248)] transition"
+            >
               Skills
             </Link>
-            <Link href="#projects" className="cursor-pointer">
+            <Link
+              href="#projects"
+              className="cursor-pointer hover:text-[rgb(112,66,248)] transition"
+            >
               Projects
             </Link>
           </div>
