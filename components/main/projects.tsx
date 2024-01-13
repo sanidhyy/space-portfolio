@@ -14,6 +14,7 @@ export const Projects = () => {
             src={project.image}
             title={project.title}
             description={project.description}
+            link={project.link}
           />
         ))}
       </div>
