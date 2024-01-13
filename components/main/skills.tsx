@@ -89,8 +89,9 @@ export const Skills = () => {
             loop
             muted
             autoPlay
-            src="/cards-video.webm"
-          ></video>
+          >
+            <source src="/videos/skills-bg.webm" type="video/webm" />
+          </video>
         </div>
       </div>
     </section>

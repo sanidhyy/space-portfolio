@@ -28,7 +28,7 @@ export const SkillDataProvider = ({
     visible: { opacity: 1 },
   };
 
-  const animationDelay = 0.3;
+  const animationDelay = 0.1;
 
   return (
     <motion.div
@@ -39,7 +39,7 @@ export const SkillDataProvider = ({
       custom={index}
       transition={{ delay: index * animationDelay }}
     >
-      <Image src={src} width={width} height={height} alt={name} />
+      <Image src={`/skills/${src}`} width={width} height={height} alt={name} />
     </motion.div>
   );
 };
