@@ -16,6 +16,7 @@ export const Navbar = () => {
             alt="Logo"
             width={70}
             height={70}
+            draggable={false}
             className="cursor-pointer hover:animate-slowspin"
           />
           <div className="font-bold ml-[10px] hidden md:block text-gray-300">
@@ -48,13 +49,19 @@ export const Navbar = () => {
 
         <div className="flex flex-row gap-5">
           {SOCIALS.map((social) => (
-            <Image
-              src={social.src}
-              alt={social.name}
+            <Link
+              href={social.link}
+              target="_blank"
+              rel="noreferrer noopener"
               key={social.name}
-              width={24}
-              height={24}
-            />
+            >
+              <Image
+                src={social.src}
+                alt={social.name}
+                width={24}
+                height={24}
+              />
+            </Link>
           ))}
         </div>
       </div>
