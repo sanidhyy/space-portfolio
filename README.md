@@ -117,7 +117,7 @@ space-portfolio/
 
 ## :wrench: Stats
 
-[![Stats for Space Portfolio](/.github/images/stats.svg "Stats for Space Portfolio")](https://pagespeed.web.dev/analysis/https-app-Space Portfolio-vercel-app/3wh1wtqo2u?form_factor=mobile "Stats for Space Portfolio")
+[![Stats for Space Portfolio](/.github/images/stats.svg "Stats for Space Portfolio")](https://pagespeed.web.dev/analysis/https-spaceportfolio-netlify-app/2efbmg117d "Stats for Space Portfolio")
 
 ## :raised_hands: Contribute
 
