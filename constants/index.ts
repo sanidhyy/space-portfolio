@@ -178,6 +178,39 @@ export const PROJECTS = [
   },
 ] as const;
 
+export const CERTIFICATES = [
+  {
+    title: "HTML",
+    image: "/certificate/HTML.jpg",
+    link: "https://verify.mygreatlearning.com/IQODKWRH"
+  },
+  {
+    title: "CSS",
+    image: "/certificate/CSS.jpg",
+    link: "https://verify.mygreatlearning.com/DBSNHJIR"
+  },
+  {
+    title: "Javascript",
+    image: "/certificate/Javascript.jpg",
+    link: "https://verify.mygreatlearning.com/ODXNLBVS"
+  },
+  {
+    title: "Block Chain",
+    image: "/certificate/Block Chain.jpg",
+    link: "https://verify.mygreatlearning.com/IMFWZYUO"
+  },
+  {
+    title: "Waterfall model",
+    image: "/certificate/Waterfall model.jpg",
+    link: "https://verify.mygreatlearning.com/LLREYOKC"
+  },
+  {
+    title: "Android",
+    image: "/certificate/Android.jpg",
+    link: "https://verify.mygreatlearning.com/LPSIKUJN"
+  },
+] as const;
+
 export const FOOTER_DATA = [
   {
     title: "Community",

@@ -1,3 +1,4 @@
+import { Certificate } from "@/components/main/certificate";
 import { Contact } from "@/components/main/contact";
 import { Encryption } from "@/components/main/encryption";
 import { Hero } from "@/components/main/hero";
@@ -11,6 +12,7 @@ export default function Home() {
         <Hero />
         <Skills />
         <Encryption />
+        <Certificate />
         <Projects />
         <Contact />
       </div>
