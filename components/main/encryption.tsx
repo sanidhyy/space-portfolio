@@ -7,8 +7,8 @@ import { slideInFromTop } from "@/lib/motion";
 
 export const Encryption = () => {
   return (
-    <div className="flex flex-row relative items-center justify-center min-h-screen w-full h-full -z-20">
-      <div className="absolute w-auto h-auto top-0 z-[5]">
+    <div className="max-w-7xl mx-auto flex flex-row relative items-center justify-center min-h-screen w-full -z-20">
+      <div className="absolute w-auto h-auto wang top-0 z-[5]">
         <motion.div
           variants={slideInFromTop}
           className="text-[40px] font-medium text-center text-gray-200"
@@ -28,7 +28,7 @@ export const Encryption = () => {
             alt="Lock top"
             width={50}
             height={50}
-            className="translate-y-5 transition-all duration-200 group-hover:translate-y-11"
+            className="translate-y-5 transition-all duration-200 group-hover:translate-y-11 w-auto h-auto"
           />
           <Image
             src="/lock-main.png"

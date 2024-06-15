@@ -66,16 +66,19 @@
     }
   ],
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
     "@heroicons/react": "^2.1.1",
     "@react-three/drei": "^9.93.0",
     "@react-three/fiber": "^8.15.13",
     "clsx": "^2.1.0",
+    "emailjs": "^4.0.3",
     "framer-motion": "^10.17.12",
     "next": "14.1.1",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.0.1",
     "react-intersection-observer": "^9.5.3",
+    "sonner": "^1.5.0",
     "tailwind-merge": "^2.2.0",
     "three": "^0.160.0"
   },

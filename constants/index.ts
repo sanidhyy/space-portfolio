@@ -45,12 +45,6 @@ export const SKILL_DATA = [
     height: 80,
   },
   {
-    skill_name: "React Query",
-    image: "reactquery.png",
-    width: 80,
-    height: 80,
-  },
-  {
     skill_name: "TypeScript",
     image: "ts.png",
     width: 80,
@@ -59,18 +53,6 @@ export const SKILL_DATA = [
   {
     skill_name: "Next.js 14",
     image: "next.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Framer Motion",
-    image: "framer.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Stripe",
-    image: "stripe.png",
     width: 80,
     height: 80,
   },
@@ -90,14 +72,14 @@ export const SKILL_DATA = [
 
 export const SOCIALS = [
   {
-    name: "Instagram",
-    icon: RxInstagramLogo,
-    link: "https://instagram.com",
+    name: "Github",
+    icon: RxGithubLogo,
+    link: "https://github.com/king-mufasa",
   },
   {
-    name: "Facebook",
-    icon: FaFacebook,
-    link: "https://facebook.com",
+    name: "Discord",
+    icon: RxDiscordLogo,
+    link: "https://discord.com",
   },
   {
     name: "Twitter",
@@ -107,66 +89,6 @@ export const SOCIALS = [
 ] as const;
 
 export const FRONTEND_SKILL = [
-  {
-    skill_name: "HTML",
-    image: "html.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "CSS",
-    image: "css.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "JavaScript",
-    image: "js.png",
-    width: 65,
-    height: 65,
-  },
-  {
-    skill_name: "Tailwind CSS",
-    image: "tailwind.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Material UI",
-    image: "mui.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "React",
-    image: "react.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Redux",
-    image: "redux.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "React Query",
-    image: "reactquery.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "TypeScript",
-    image: "ts.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Next.js 14",
-    image: "next.png",
-    width: 80,
-    height: 80,
-  },
 ] as const;
 
 export const BACKEND_SKILL = [
@@ -206,18 +128,6 @@ export const BACKEND_SKILL = [
     width: 70,
     height: 70,
   },
-  {
-    skill_name: "Prisma",
-    image: "prisma.png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Graphql",
-    image: "graphql.png",
-    width: 80,
-    height: 80,
-  },
 ] as const;
 
 export const FULLSTACK_SKILL = [
@@ -227,19 +137,6 @@ export const FULLSTACK_SKILL = [
     width: 70,
     height: 70,
   },
-  {
-    skill_name: "Tauri",
-    image: "tauri.png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Docker",
-    image: "docker.png",
-    width: 70,
-    height: 70,
-  },
-
   {
     skill_name: "Figma",
     image: "figma.png",
@@ -356,6 +253,10 @@ export const NAV_LINKS = [
   {
     title: "Projects",
     link: "#projects",
+  },
+  {
+    title: "Contact",
+    link: "#contact",
   },
 ] as const;
 
