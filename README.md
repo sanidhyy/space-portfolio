@@ -177,6 +177,7 @@ Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment)
 ## :star: Give A Star
 
 You can also give this repository a star to show more people and they can use this repository.
+and make follow to developer
 
 ## :star2: Star History
 
