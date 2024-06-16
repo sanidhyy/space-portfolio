@@ -10,11 +10,12 @@ export const Certificate = () => {
         My Certificate
       </h1>
       <div className="h-full w-full grid grid-cols-1 lg:grid-cols-3 gap-10 px-10">
-        {CERTIFICATES.map((certificate) => (
+        {CERTIFICATES.map((certificate, idx) => (
           <CertificateCard
             src={certificate.image}
             title={certificate.title}
             link={certificate.link}
+            key={idx}
           />
         ))}
       </div>
