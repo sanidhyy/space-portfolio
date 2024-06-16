@@ -53,7 +53,7 @@ export const Skills = () => {
             muted
             autoPlay
           >
-            <source src="/videos/skills-bg.webm" type="video/webm" />
+            <source src="/videos/encryption-bg.webm" type="video/webm" />
           </video>
         </div>
       </div>

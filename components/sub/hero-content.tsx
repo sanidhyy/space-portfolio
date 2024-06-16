@@ -33,11 +33,11 @@ export const HeroContent = () => {
           className="flex flex-col gap-6 mt-6 text-6xl text-bold text-white max-w-[600px] w-auto h-auto"
         >
           <span>
-            Providing{" "}
+
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-              the best
+              Hello !
             </span>{" "}
-            project experience.
+            <span className="text-4xl">I am Keigo Igarashi</span>{" "}
           </span>
         </motion.div>
 
@@ -45,16 +45,19 @@ export const HeroContent = () => {
           variants={slideInFromLeft(0.8)}
           className="text-lg text-gray-400 my-5 max-w-[600px]"
         >
-          I&apos;m a Full Stack Software Engineer with experience in Website,
-          Mobile, and Software development. Check out my projects and skills.
+          Frontend & Web3 Developer.
+          I have 7+ years of software development history as Fullstack or Frontend developer.
+          My strong point is making NFT marketplace on any chain, with any stack.<br />
+          Just give me your requirement, and you will success.
+
         </motion.p>
 
-        <motion.a
+        {/* <motion.a
           variants={slideInFromLeft(1)}
           className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
         >
           Learn more
-        </motion.a>
+        </motion.a> */}
       </div>
 
       <motion.div

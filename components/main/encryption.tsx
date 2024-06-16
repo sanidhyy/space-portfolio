@@ -7,7 +7,7 @@ import { slideInFromTop } from "@/lib/motion";
 
 export const Encryption = () => {
   return (
-    <div className="max-w-7xl mx-auto flex flex-row relative items-center justify-center min-h-screen w-full -z-20">
+    <div className="max-w-7xl mx-auto flex flex-row relative items-center justify-center w-full -z-20" style={{ height: "0.8vh" }}>
       <div className="absolute w-auto h-auto wang top-0 z-[5]">
         <motion.div
           variants={slideInFromTop}

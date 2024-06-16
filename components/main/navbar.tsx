@@ -20,7 +20,7 @@ export const Navbar = () => {
             className="cursor-pointer hover:animate-slowspin blur-0"
           />
           <div className="font-bold ml-[10px] hidden md:block text-gray-300">
-          ソフト
+          敬悟 五十嵐
           </div>
         </Link>
 

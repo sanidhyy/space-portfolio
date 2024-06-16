@@ -1,7 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { slideIn, zoomIn } from "../utils/motion";
 
 
 type CertificateCardProps = {
@@ -16,8 +14,7 @@ export const CertificateCard = ({
   link,
 }: CertificateCardProps) => {
   return (
-    <motion.div
-      variants={zoomIn(0.2, 1)}
+    <div
       className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
     >
       <Link
@@ -38,6 +35,6 @@ export const CertificateCard = ({
           <h1 className="text-2xl font-semibold text-white">{title}</h1>
         </div>
       </Link>
-    </motion.div>
+    </div>
   );
 };

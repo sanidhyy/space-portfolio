@@ -84,6 +84,8 @@ export const Contact = () => {
 
   // handle form submit
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+
+    console.log("LLL",process.env.NEXT_PUBLIC_VITE_APP_EMAILJS_KEY)
     // prevent default page reload
     e.preventDefault();
 
@@ -96,16 +98,16 @@ export const Contact = () => {
     // send email
     emailjs
       .send(
-        import.meta.env.VITE_APP_SERVICE_ID,
-        import.meta.env.VITE_APP_TEMPLATE_ID,
+        process.env.NEXT_PUBLIC_VITE_APP_SERVICE_ID as string,
+        process.env.NEXT_PUBLIC_VITE_APP_TEMPLATE_ID as string,
         {
           from_name: form.name,
           to_name: "Shubham",
           from_email: form.email.trim().toLowerCase(),
-          to_email: import.meta.env.VITE_APP_EMAILJS_RECIEVER,
+          to_email: process.env.NEXT_PUBLIC_VITE_APP_EMAILJS_RECIEVER,
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_KEY,
+        process.env.NEXT_PUBLIC_VITE_APP_EMAILJS_KEY,
       )
       .then(() => toast.success("Thanks for contacting me."))
       .catch((error) => {
