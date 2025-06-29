@@ -5,6 +5,8 @@ import type { PropsWithChildren } from "react";
 import { Footer } from "@/components/main/footer";
 import { Navbar } from "@/components/main/navbar";
 import { StarsCanvas } from "@/components/main/star-background";
+import { CosmicPlayModal } from "@/components/main/cosmic-play-modal"; // Add this import
+import { CosmicProvider } from "@/contexts/cosmic-context"; // Add this import
 import { siteConfig } from "@/config";
 import { cn } from "@/lib/utils";
 
@@ -27,10 +29,13 @@ export default function RootLayout({ children }: PropsWithChildren) {
           inter.className
         )}
       >
-        <StarsCanvas />
-        <Navbar />
-        {children}
-        <Footer />
+        <CosmicProvider> {/* Add this wrapper */}
+          <StarsCanvas />
+          <Navbar />
+          {children}
+          <Footer />
+          <CosmicPlayModal /> {/* Add this component */}
+        </CosmicProvider> {/* Close the wrapper */}
       </body>
     </html>
   );
