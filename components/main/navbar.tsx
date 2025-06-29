@@ -2,54 +2,125 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ChevronDownIcon } from '@heroicons/react/24/outline';
 
-import { LINKS, NAV_LINKS, SOCIALS } from "@/constants";
+// You'll need to update your constants file with this structure
+const NAV_LINKS = [
+  { title: "About", link: "/about" },
+  { title: "Skills", link: "/skills" },
+  { 
+    title: "Research", 
+    link: "/research",
+    dropdown: [
+      { title: "Research Domains", link: "/research/domains" },
+      { title: "Publications", link: "/research/publications" },
+      { title: "Ongoing Research", link: "/research/ongoing" }
+    ]
+  },
+  { title: "Cosmic Play", link: "/cosmic-play", special: true },
+  { 
+    title: "Projects", 
+    link: "/projects",
+    dropdown: [
+      { title: "QuantBoX", link: "/projects/quantbox" },
+      { title: "AutoAnalytiX", link: "/projects/autoanaytix" },
+      { title: "separator", link: "#" },
+      { title: "All Projects", link: "/projects" }
+    ]
+  },
+  { title: "Experience", link: "/experience" },
+  { title: "Contact", link: "/contact" }
+];
+
+const SOCIALS = [
+  // Your social links here
+];
 
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  const handleDropdownToggle = (title: string) => {
+    setActiveDropdown(activeDropdown === title ? null : title);
+  };
 
   return (
-    <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001427] backdrop-blur-md z-50 px-10">
+    <div className="w-full h-[80px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001427] backdrop-blur-md z-50 px-10">
       {/* Navbar Container */}
       <div className="w-full h-full flex items-center justify-between m-auto px-[10px]">
         {/* Logo + Name */}
         <Link
-          href="#about-me"
+          href="/"
           className="flex items-center"
         >
           <Image
             src="/logo.png"
             alt="Logo"
-            width={70}
-            height={70}
+            width={75}
+            height={75}
             draggable={false}
             className="cursor-pointer"
           />
-          <div className="hidden md:flex md:selffont-bold ml-[10px] text-gray-300">John Doe</div>
+          <div className="hidden md:flex font-bold ml-[10px] text-white text-lg">
+            Priyansh Singhal
+          </div>
         </Link>
 
         {/* Web Navbar */}
-        <div className="hidden md:flex w-[500px] h-full flex-row items-center justify-between md:mr-20">
-          <div className="flex items-center justify-between w-full h-auto border-[rgba(112,66,248,0.38)] bg-[rgba(3,0,20,0.37)] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
+        <div className="hidden md:flex w-auto h-full flex-row items-center justify-center">
+          <div className="flex items-center justify-between h-auto border-[rgba(112,66,248,0.38)] bg-[rgba(3,0,20,0.37)] px-[25px] py-[12px] rounded-full text-white">
             {NAV_LINKS.map((link) => (
-              <Link
-                key={link.title}
-                href={link.link}
-                className="cursor-pointer hover:text-[rgb(112,66,248)] transition"
-              >
-                {link.title}
-              </Link>
+              <div key={link.title} className="relative group">
+                {link.dropdown ? (
+                  // Dropdown Navigation Item
+                  <div className="relative">
+                    <button
+                      onClick={() => handleDropdownToggle(link.title)}
+                      className="cursor-pointer hover:text-[rgb(112,66,248)] transition flex items-center gap-1 mx-3 text-base font-medium"
+                    >
+                      {link.title}
+                      <ChevronDownIcon 
+                        className={`h-4 w-4 transition-transform ${
+                          activeDropdown === link.title ? 'rotate-180' : ''
+                        }`} 
+                      />
+                    </button>
+                    
+                    {/* Dropdown Menu */}
+                    {activeDropdown === link.title && (
+                      <div className="absolute top-full left-0 mt-2 w-48 bg-[rgba(3,0,20,0.95)] backdrop-blur-md border border-[rgba(112,66,248,0.3)] rounded-lg shadow-lg">
+                        {link.dropdown.map((dropdownItem, index) => (
+                          dropdownItem.title === "separator" ? (
+                            <div key={index} className="border-t border-[rgba(112,66,248,0.3)] my-1" />
+                          ) : (
+                            <Link
+                              key={dropdownItem.title}
+                              href={dropdownItem.link}
+                              className="block px-4 py-3 text-sm text-gray-200 hover:text-[rgb(112,66,248)] hover:bg-[rgba(112,66,248,0.1)] transition"
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              {dropdownItem.title}
+                            </Link>
+                          )
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  // Regular Navigation Item
+                  <Link
+                    href={link.link}
+                    className={`cursor-pointer transition mx-3 text-base font-medium ${
+                      link.special 
+                        ? 'text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text hover:from-purple-300 hover:via-pink-400 hover:to-red-400 font-bold text-lg animate-pulse'
+                        : 'text-white hover:text-[rgb(112,66,248)]'
+                    }`}
+                  >
+                    {link.title}
+                  </Link>
+                )}
+              </div>
             ))}
-
-            {/* Source Code */}
-            <Link
-              href={LINKS.sourceCode}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="cursor-pointer hover:text-[rgb(112,66,248)] transition"
-            >
-              Source Code
-            </Link>
           </div>
         </div>
 
@@ -61,15 +132,16 @@ export const Navbar = () => {
               target="_blank"
               rel="noreferrer noopener"
               key={name}
+              className="hover:scale-110 transition-transform"
             >
-              <Icon className="h-6 w-6 text-white" />
+              <Icon className="h-6 w-6 text-white hover:text-[rgb(112,66,248)]" />
             </Link>
           ))}
         </div>
 
         {/* Hamburger Menu */}
         <button
-          className="md:hidden text-white focus:outline-none text-4xl"
+          className="md:hidden text-white focus:outline-none text-4xl hover:text-[rgb(112,66,248)] transition"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           ☰
@@ -78,28 +150,57 @@ export const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-[65px] left-0 w-full bg-[#030014] p-5 flex flex-col items-center text-gray-300 md:hidden">
+        <div className="absolute top-[80px] left-0 w-full bg-[#030014] p-6 flex flex-col items-center text-white md:hidden border-t border-[rgba(112,66,248,0.3)]">
           {/* Links */}
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center gap-5">
             {NAV_LINKS.map((link) => (
-              <Link
-                key={link.title}
-                href={link.link}
-                className="cursor-pointer hover:text-[rgb(112,66,248)] transition text-center"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {link.title}
-              </Link>
+              <div key={link.title} className="text-center">
+                {link.dropdown ? (
+                  <div>
+                    <button
+                      onClick={() => handleDropdownToggle(link.title)}
+                      className="cursor-pointer hover:text-[rgb(112,66,248)] transition text-center text-lg font-medium flex items-center gap-1"
+                    >
+                      {link.title}
+                      <ChevronDownIcon className="h-4 w-4" />
+                    </button>
+                    {activeDropdown === link.title && (
+                      <div className="mt-2 flex flex-col gap-2">
+                        {link.dropdown.map((dropdownItem, index) => (
+                          dropdownItem.title === "separator" ? (
+                            <div key={index} className="border-t border-[rgba(112,66,248,0.3)] my-1" />
+                          ) : (
+                            <Link
+                              key={dropdownItem.title}
+                              href={dropdownItem.link}
+                              className="text-sm text-gray-300 hover:text-[rgb(112,66,248)] transition"
+                              onClick={() => {
+                                setIsMobileMenuOpen(false);
+                                setActiveDropdown(null);
+                              }}
+                            >
+                              {dropdownItem.title}
+                            </Link>
+                          )
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    href={link.link}
+                    className={`cursor-pointer transition text-lg font-medium ${
+                      link.special 
+                        ? 'text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text font-bold text-xl animate-pulse'
+                        : 'text-white hover:text-[rgb(112,66,248)]'
+                    }`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.title}
+                  </Link>
+                )}
+              </div>
             ))}
-            <Link
-              href={LINKS.sourceCode}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="cursor-pointer hover:text-[rgb(112,66,248)] transition text-center"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Source Code
-            </Link>
           </div>
 
           {/* Social Icons */}
@@ -110,8 +211,9 @@ export const Navbar = () => {
                 target="_blank"
                 rel="noreferrer noopener"
                 key={name}
+                className="hover:scale-110 transition-transform"
               >
-                <Icon className="h-8 w-8 text-white" />
+                <Icon className="h-8 w-8 text-white hover:text-[rgb(112,66,248)]" />
               </Link>
             ))}
           </div>
@@ -120,3 +222,128 @@ export const Navbar = () => {
     </div>
   );
 };
+
+//################################################################
+
+// 'use client';
+// import { useState } from "react";
+// import Image from "next/image";
+// import Link from "next/link";
+
+// import { LINKS, NAV_LINKS, SOCIALS } from "@/constants";
+
+// export const Navbar = () => {
+//   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+//   return (
+//     <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001427] backdrop-blur-md z-50 px-10">
+//       {/* Navbar Container */}
+//       <div className="w-full h-full flex items-center justify-between m-auto px-[10px]">
+//         {/* Logo + Name */}
+//         <Link
+//           href="#about-me"
+//           className="flex items-center"
+//         >
+//           <Image
+//             src="/logo.png"
+//             alt="Logo"
+//             width={70}
+//             height={70}
+//             draggable={false}
+//             className="cursor-pointer"
+//           />
+//           <div className="hidden md:flex md:selffont-bold ml-[10px] text-gray-300">John Doe</div>
+//         </Link>
+
+//         {/* Web Navbar */}
+//         <div className="hidden md:flex w-[500px] h-full flex-row items-center justify-between md:mr-20">
+//           <div className="flex items-center justify-between w-full h-auto border-[rgba(112,66,248,0.38)] bg-[rgba(3,0,20,0.37)] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
+//             {NAV_LINKS.map((link) => (
+//               <Link
+//                 key={link.title}
+//                 href={link.link}
+//                 className="cursor-pointer hover:text-[rgb(112,66,248)] transition"
+//               >
+//                 {link.title}
+//               </Link>
+//             ))}
+
+//             {/* Source Code */}
+//             <Link
+//               href={LINKS.sourceCode}
+//               target="_blank"
+//               rel="noreferrer noopener"
+//               className="cursor-pointer hover:text-[rgb(112,66,248)] transition"
+//             >
+//               Source Code
+//             </Link>
+//           </div>
+//         </div>
+
+//         {/* Social Icons (Web) */}
+//         <div className="hidden md:flex flex-row gap-5">
+//           {SOCIALS.map(({ link, name, icon: Icon }) => (
+//             <Link
+//               href={link}
+//               target="_blank"
+//               rel="noreferrer noopener"
+//               key={name}
+//             >
+//               <Icon className="h-6 w-6 text-white" />
+//             </Link>
+//           ))}
+//         </div>
+
+//         {/* Hamburger Menu */}
+//         <button
+//           className="md:hidden text-white focus:outline-none text-4xl"
+//           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+//         >
+//           ☰
+//         </button>
+//       </div>
+
+//       {/* Mobile Menu */}
+//       {isMobileMenuOpen && (
+//         <div className="absolute top-[65px] left-0 w-full bg-[#030014] p-5 flex flex-col items-center text-gray-300 md:hidden">
+//           {/* Links */}
+//           <div className="flex flex-col items-center gap-4">
+//             {NAV_LINKS.map((link) => (
+//               <Link
+//                 key={link.title}
+//                 href={link.link}
+//                 className="cursor-pointer hover:text-[rgb(112,66,248)] transition text-center"
+//                 onClick={() => setIsMobileMenuOpen(false)}
+//               >
+//                 {link.title}
+//               </Link>
+//             ))}
+//             <Link
+//               href={LINKS.sourceCode}
+//               target="_blank"
+//               rel="noreferrer noopener"
+//               className="cursor-pointer hover:text-[rgb(112,66,248)] transition text-center"
+//               onClick={() => setIsMobileMenuOpen(false)}
+//             >
+//               Source Code
+//             </Link>
+//           </div>
+
+//           {/* Social Icons */}
+//           <div className="flex justify-center gap-6 mt-6">
+//             {SOCIALS.map(({ link, name, icon: Icon }) => (
+//               <Link
+//                 href={link}
+//                 target="_blank"
+//                 rel="noreferrer noopener"
+//                 key={name}
+//               >
+//                 <Icon className="h-8 w-8 text-white" />
+//               </Link>
+//             ))}
+//           </div>
+//         </div>
+//       )}
+//     </div>
+//   );
+// };
