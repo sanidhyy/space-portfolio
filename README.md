@@ -44,28 +44,19 @@
 Here is the folder structure of this app.
 
 <!--- FOLDER_STRUCTURE_START --->
-
 ```bash
 space-portfolio/
   |- app/
+    |-- apple-icon.png
     |-- favicon.ico
     |-- globals.css
+    |-- icon1.png
+    |-- icon2.png
     |-- layout.tsx
     |-- page.tsx
   |- components/
     |-- main/
-        |--- encryption.tsx
-        |--- footer.tsx
-        |--- hero.tsx
-        |--- navbar.tsx
-        |--- projects.tsx
-        |--- skills.tsx
-        |--- star-background.tsx
     |-- sub/
-        |--- hero-content.tsx
-        |--- project-card.tsx
-        |--- skill-data-provider.tsx
-        |--- skill-text.tsx
   |- config/
     |-- index.ts
   |- constants/
@@ -74,15 +65,10 @@ space-portfolio/
     |-- motion.ts
     |-- utils.ts
   |- public/
-    |-- projects/
-    |-- skills/
-    |-- videos/
-    |-- hero-bg.svg
-    |-- lock-main.png
-    |-- lock-top.png
-    |-- logo.png
   |- .eslintrc.json
   |- .gitignore
+  |- eslint.config.mjs
+  |- netlify.toml
   |- next.config.js
   |- package-lock.json
   |- package.json
@@ -90,7 +76,6 @@ space-portfolio/
   |- tailwind.config.ts
   |- tsconfig.json
 ```
-
 <!--- FOLDER_STRUCTURE_END --->
 
 <br />
@@ -132,28 +117,28 @@ You might encounter some bugs while using this app. You are more than welcome to
 Useful resources and dependencies that are used in Space Portfolio.
 
 <!--- DEPENDENCIES_START --->
-
-- [@heroicons/react](https://www.npmjs.com/package/@heroicons/react): ^2.1.1
-- [@react-three/drei](https://www.npmjs.com/package/@react-three/drei): ^9.93.0
-- [@react-three/fiber](https://www.npmjs.com/package/@react-three/fiber): ^8.15.13
-- [clsx](https://www.npmjs.com/package/clsx): ^2.1.0
-- [framer-motion](https://www.npmjs.com/package/framer-motion): ^10.17.12
-- [next](https://www.npmjs.com/package/next): 14.0.4
-- [react](https://www.npmjs.com/package/react): ^18
-- [react-dom](https://www.npmjs.com/package/react-dom): ^18
-- [react-icons](https://www.npmjs.com/package/react-icons): ^5.0.1
-- [react-intersection-observer](https://www.npmjs.com/package/react-intersection-observer): ^9.5.3
-- [tailwind-merge](https://www.npmjs.com/package/tailwind-merge): ^2.2.0
-- [three](https://www.npmjs.com/package/three): ^0.160.0
-- [@types/node](https://www.npmjs.com/package/@types/node): ^20
-- [@types/react](https://www.npmjs.com/package/@types/react): ^18
-- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): ^18
-- [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.0.1
-- [eslint](https://www.npmjs.com/package/eslint): ^8
-- [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 14.0.4
+- [@heroicons/react](https://www.npmjs.com/package/@heroicons/react): ^2.2.0
+- [@react-three/drei](https://www.npmjs.com/package/@react-three/drei): ^10.7.7
+- [@react-three/fiber](https://www.npmjs.com/package/@react-three/fiber): ^9.5.0
+- [@types/node](https://www.npmjs.com/package/@types/node): ^25
+- [@types/react](https://www.npmjs.com/package/@types/react): 19.2.14
+- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): 19.2.3
+- [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.4.24
+- [clsx](https://www.npmjs.com/package/clsx): ^2.1.1
+- [eslint](https://www.npmjs.com/package/eslint): ^9.39.2
+- [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 16.1.6
+- [framer-motion](https://www.npmjs.com/package/framer-motion): ^12.34.2
+- [next](https://www.npmjs.com/package/next): 16.1.6
 - [postcss](https://www.npmjs.com/package/postcss): ^8
+- [react](https://www.npmjs.com/package/react): 19.2.4
+- [react-dom](https://www.npmjs.com/package/react-dom): 19.2.4
+- [react-icons](https://www.npmjs.com/package/react-icons): ^5.0.1
+- [react-intersection-observer](https://www.npmjs.com/package/react-intersection-observer): ^10.0.2
+- [tailwind-merge](https://www.npmjs.com/package/tailwind-merge): ^3.5.0
 - [tailwindcss](https://www.npmjs.com/package/tailwindcss): ^3.3.0
+- [three](https://www.npmjs.com/package/three): ^0.183.0
 - [typescript](https://www.npmjs.com/package/typescript): ^5
+
 <!--- DEPENDENCIES_END --->
 
 ## :coffee: Buy Me a Coffee
