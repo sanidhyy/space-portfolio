@@ -1,0 +1,2 @@
+[build]
+  ignore = "git diff HEAD^ HEAD --quiet . ':!*.md' ':!LICENSE' ':!.env.example' ':!.github' ':!.vscode'"
