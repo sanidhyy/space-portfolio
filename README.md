@@ -43,6 +43,8 @@
 
 Here is the folder structure of this app.
 
+<!--- FOLDER_STRUCTURE_START --->
+
 ```bash
 space-portfolio/
   |- app/
@@ -89,6 +91,8 @@ space-portfolio/
   |- tsconfig.json
 ```
 
+<!--- FOLDER_STRUCTURE_END --->
+
 <br />
 
 ## :toolbox: Getting Started
@@ -127,6 +131,8 @@ You might encounter some bugs while using this app. You are more than welcome to
 
 Useful resources and dependencies that are used in Space Portfolio.
 
+<!--- DEPENDENCIES_START --->
+
 - [@heroicons/react](https://www.npmjs.com/package/@heroicons/react): ^2.1.1
 - [@react-three/drei](https://www.npmjs.com/package/@react-three/drei): ^9.93.0
 - [@react-three/fiber](https://www.npmjs.com/package/@react-three/fiber): ^8.15.13
@@ -148,6 +154,7 @@ Useful resources and dependencies that are used in Space Portfolio.
 - [postcss](https://www.npmjs.com/package/postcss): ^8
 - [tailwindcss](https://www.npmjs.com/package/tailwindcss): ^3.3.0
 - [typescript](https://www.npmjs.com/package/typescript): ^5
+<!--- DEPENDENCIES_END --->
 
 ## :coffee: Buy Me a Coffee
 
