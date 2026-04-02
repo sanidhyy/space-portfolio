@@ -128,7 +128,7 @@ Useful resources and dependencies that are used in Space Portfolio.
 - [eslint](https://www.npmjs.com/package/eslint): ^10.1.0
 - [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 16.2.2
 - [framer-motion](https://www.npmjs.com/package/framer-motion): ^12.38.0
-- [next](https://www.npmjs.com/package/next): 16.2.1
+- [next](https://www.npmjs.com/package/next): 16.2.2
 - [postcss](https://www.npmjs.com/package/postcss): ^8
 - [react](https://www.npmjs.com/package/react): 19.2.4
 - [react-dom](https://www.npmjs.com/package/react-dom): 19.2.4
