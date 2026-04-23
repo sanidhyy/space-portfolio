@@ -136,7 +136,7 @@ Useful resources and dependencies that are used in Space Portfolio.
 - [react-intersection-observer](https://www.npmjs.com/package/react-intersection-observer): ^10.0.3
 - [tailwind-merge](https://www.npmjs.com/package/tailwind-merge): ^3.5.0
 - [tailwindcss](https://www.npmjs.com/package/tailwindcss): ^3.3.0
-- [three](https://www.npmjs.com/package/three): ^0.183.2
+- [three](https://www.npmjs.com/package/three): ^0.184.0
 - [typescript](https://www.npmjs.com/package/typescript): ^6
 
 <!--- DEPENDENCIES_END --->
