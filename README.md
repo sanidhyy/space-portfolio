@@ -119,7 +119,7 @@ Useful resources and dependencies that are used in Space Portfolio.
 <!--- DEPENDENCIES_START --->
 - [@heroicons/react](https://www.npmjs.com/package/@heroicons/react): ^2.2.0
 - [@react-three/drei](https://www.npmjs.com/package/@react-three/drei): ^10.7.7
-- [@react-three/fiber](https://www.npmjs.com/package/@react-three/fiber): ^9.6.0
+- [@react-three/fiber](https://www.npmjs.com/package/@react-three/fiber): ^9.6.1
 - [@types/node](https://www.npmjs.com/package/@types/node): ^25
 - [@types/react](https://www.npmjs.com/package/@types/react): 19.2.14
 - [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): 19.2.3
