@@ -72,7 +72,7 @@
     "clsx": "^2.1.1",
     "framer-motion": "^12.40.0",
     "next": "16.2.6",
-    "react": "19.2.6",
+    "react": "19.2.7",
     "react-dom": "19.2.6",
     "react-icons": "^5.6.0",
     "react-intersection-observer": "^10.0.3",
@@ -81,7 +81,7 @@
   },
   "devDependencies": {
     "@types/node": "^25",
-    "@types/react": "19.2.15",
+    "@types/react": "19.2.16",
     "@types/react-dom": "19.2.3",
     "autoprefixer": "^10.5.0",
     "eslint": "^10.4.0",
@@ -91,7 +91,7 @@
     "typescript": "^6"
   },
   "overrides": {
-    "@types/react": "19.2.15",
+    "@types/react": "19.2.16",
     "@types/react-dom": "19.2.3"
   }
 }
