@@ -121,7 +121,7 @@ Useful resources and dependencies that are used in Space Portfolio.
 - [@react-three/drei](https://www.npmjs.com/package/@react-three/drei): ^10.7.7
 - [@react-three/fiber](https://www.npmjs.com/package/@react-three/fiber): ^9.6.1
 - [@types/node](https://www.npmjs.com/package/@types/node): ^25
-- [@types/react](https://www.npmjs.com/package/@types/react): 19.2.15
+- [@types/react](https://www.npmjs.com/package/@types/react): 19.2.16
 - [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): 19.2.3
 - [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.5.0
 - [clsx](https://www.npmjs.com/package/clsx): ^2.1.1
@@ -130,7 +130,7 @@ Useful resources and dependencies that are used in Space Portfolio.
 - [framer-motion](https://www.npmjs.com/package/framer-motion): ^12.40.0
 - [next](https://www.npmjs.com/package/next): 16.2.6
 - [postcss](https://www.npmjs.com/package/postcss): ^8
-- [react](https://www.npmjs.com/package/react): 19.2.6
+- [react](https://www.npmjs.com/package/react): 19.2.7
 - [react-dom](https://www.npmjs.com/package/react-dom): 19.2.6
 - [react-icons](https://www.npmjs.com/package/react-icons): ^5.6.0
 - [react-intersection-observer](https://www.npmjs.com/package/react-intersection-observer): ^10.0.3
