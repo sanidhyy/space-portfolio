@@ -70,7 +70,7 @@
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.6.1",
     "clsx": "^2.1.1",
-    "framer-motion": "^12.41.0",
+    "framer-motion": "^12.42.2",
     "next": "16.2.9",
     "react": "19.2.7",
     "react-dom": "19.2.7",
