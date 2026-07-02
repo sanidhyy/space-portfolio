@@ -127,12 +127,12 @@ Useful resources and dependencies that are used in Space Portfolio.
 - [clsx](https://www.npmjs.com/package/clsx): ^2.1.1
 - [eslint](https://www.npmjs.com/package/eslint): ^10.6.0
 - [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 16.2.9
-- [framer-motion](https://www.npmjs.com/package/framer-motion): ^12.41.0
+- [framer-motion](https://www.npmjs.com/package/framer-motion): ^12.42.2
 - [next](https://www.npmjs.com/package/next): 16.2.9
 - [postcss](https://www.npmjs.com/package/postcss): ^8
 - [react](https://www.npmjs.com/package/react): 19.2.7
 - [react-dom](https://www.npmjs.com/package/react-dom): 19.2.7
-- [react-icons](https://www.npmjs.com/package/react-icons): ^5.6.0
+- [react-icons](https://www.npmjs.com/package/react-icons): ^5.7.0
 - [react-intersection-observer](https://www.npmjs.com/package/react-intersection-observer): ^10.0.3
 - [tailwind-merge](https://www.npmjs.com/package/tailwind-merge): ^3.6.0
 - [tailwindcss](https://www.npmjs.com/package/tailwindcss): ^3.3.0
