@@ -72,7 +72,7 @@
     "clsx": "^2.1.1",
     "framer-motion": "^12.42.2",
     "next": "16.2.11",
-    "react": "19.2.7",
+    "react": "19.2.8",
     "react-dom": "19.2.7",
     "react-icons": "^5.7.0",
     "react-intersection-observer": "^10.1.0",
