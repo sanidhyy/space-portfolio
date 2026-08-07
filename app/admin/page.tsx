@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 import type { CmsData } from "@/lib/cms-shared";
 
-const storageKey = "payoshnee-portfolio-admin-password";
+const storageKey = "space-portfolio-admin-password";
 const tabs = [
   "Hero",
   "Skills",

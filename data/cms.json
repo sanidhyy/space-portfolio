@@ -1,20 +1,20 @@
 {
   "seo": {
-    "title": "Payoshnee Joshi | Cloud and AI/ML Engineer",
-    "description": "Portfolio of Payoshnee Joshi, a Cloud and AI/ML Engineer building reliable cloud systems, intelligent applications, and production-ready machine learning solutions.",
+    "title": "Alex Carter | Full Stack Developer",
+    "description": "Portfolio of Alex Carter, a fictional full stack developer building cloud-ready web applications, AI features, and polished product experiences.",
     "keywords": [
-      "Payoshnee Joshi",
+      "Alex Carter",
+      "Full Stack Developer",
       "Cloud Engineer",
       "AI Engineer",
-      "ML Engineer",
-      "AWS",
       "Next.js portfolio",
-      "Machine Learning",
-      "Software Engineer"
+      "React",
+      "TypeScript",
+      "Portfolio CMS"
     ],
     "favicon": "/favicon.ico",
     "image": "/projects/project-1.png",
-    "url": "https://payoshnee-joshi-portfolio.vercel.app"
+    "url": "https://space-portfolio-demo.vercel.app"
   },
   "navSections": [
     {
@@ -59,10 +59,10 @@
     }
   ],
   "hero": {
-    "badge": "Cloud and AI/ML Portfolio",
+    "badge": "Full Stack Developer Portfolio",
     "titlePrefix": "Hi my name is",
-    "titleHighlight": "Payoshnee Joshi",
-    "subtitle": "Cloud and AI/ML Engineer.",
+    "titleHighlight": "Alex Carter",
+    "subtitle": "Full Stack Developer focused on cloud, AI, and product engineering.",
     "cta": {
       "label": "Know more about me",
       "href": "#blogs"
@@ -137,9 +137,9 @@
     ]
   },
   "skills": {
-    "badge": "Think better with modern cloud systems",
-    "heading": "Making intelligent apps with modern technologies.",
-    "subheading": "Cloud, AI/ML, and product engineering.",
+    "badge": "Build better with modern technologies",
+    "heading": "Making apps with cloud-ready tools and thoughtful UI.",
+    "subheading": "Frontend, backend, cloud, and AI-powered product work.",
     "groups": [
       {
         "title": "Frontend",
@@ -149,7 +149,7 @@
             "description": "Semantic page structure",
             "level": "Expert",
             "projectSlugs": [
-              "ai-cloud-portfolio"
+              "cms-powered-space-portfolio"
             ],
             "image": "html.png",
             "width": 80,
@@ -160,7 +160,7 @@
             "description": "Responsive layouts and styling",
             "level": "Expert",
             "projectSlugs": [
-              "ai-cloud-portfolio"
+              "cms-powered-space-portfolio"
             ],
             "image": "css.png",
             "width": 80,
@@ -171,7 +171,7 @@
             "description": "Interactive web experiences",
             "level": "Pro",
             "projectSlugs": [
-              "ai-cloud-portfolio"
+              "cms-powered-space-portfolio"
             ],
             "image": "js.png",
             "width": 65,
@@ -182,7 +182,7 @@
             "description": "Typed application development",
             "level": "Intermediate",
             "projectSlugs": [
-              "ai-cloud-portfolio"
+              "cms-powered-space-portfolio"
             ],
             "image": "ts.png",
             "width": 80,
@@ -193,7 +193,7 @@
             "description": "Component-based frontend apps",
             "level": "Pro",
             "projectSlugs": [
-              "ai-cloud-portfolio"
+              "cms-powered-space-portfolio"
             ],
             "image": "react.png",
             "width": 80,
@@ -204,7 +204,7 @@
             "description": "Full-stack React applications",
             "level": "Intermediate",
             "projectSlugs": [
-              "ai-cloud-portfolio"
+              "cms-powered-space-portfolio"
             ],
             "image": "next.png",
             "width": 80,
@@ -215,7 +215,7 @@
             "description": "Utility-first UI styling",
             "level": "Pro",
             "projectSlugs": [
-              "ai-cloud-portfolio"
+              "cms-powered-space-portfolio"
             ],
             "image": "tailwind.png",
             "width": 80,
@@ -231,7 +231,7 @@
             "description": "Backend APIs and tooling",
             "level": "Intermediate",
             "projectSlugs": [
-              "ai-cloud-portfolio"
+              "cms-powered-space-portfolio"
             ],
             "image": "node.png",
             "width": 80,
@@ -242,7 +242,7 @@
             "description": "Auth, database, and hosting",
             "level": "Intermediate",
             "projectSlugs": [
-              "ai-cloud-portfolio"
+              "cms-powered-space-portfolio"
             ],
             "image": "firebase.png",
             "width": 55,
@@ -253,7 +253,7 @@
             "description": "Relational database design",
             "level": "Beginner",
             "projectSlugs": [
-              "ai-cloud-portfolio"
+              "cms-powered-space-portfolio"
             ],
             "image": "postgresql.png",
             "width": 70,
@@ -264,7 +264,7 @@
             "description": "SQL and structured data",
             "level": "Beginner",
             "projectSlugs": [
-              "ai-cloud-portfolio"
+              "cms-powered-space-portfolio"
             ],
             "image": "mysql.png",
             "width": 70,
@@ -275,7 +275,7 @@
             "description": "Containerized deployments",
             "level": "Beginner",
             "projectSlugs": [
-              "ai-cloud-portfolio"
+              "cms-powered-space-portfolio"
             ],
             "image": "docker.png",
             "width": 70,
@@ -295,13 +295,13 @@
   ],
   "projects": [
     {
-      "title": "AI Cloud Portfolio",
-      "slug": "ai-cloud-portfolio",
-      "description": "A space-themed portfolio with animated hero icons, dynamic content sections, and SEO-managed profile content.",
+      "title": "CMS Powered Space Portfolio",
+      "slug": "cms-powered-space-portfolio",
+      "description": "A space-themed portfolio with an admin dashboard, Supabase-backed content, animated sections, and SEO-managed profile data.",
       "highlights": [
-        "Dynamic admin CMS",
-        "Animated hero and skill sections",
-        "SEO-ready portfolio content"
+        "Reusable CMS admin dashboard",
+        "Supabase database and storage support",
+        "Animated skills and project details"
       ],
       "image": "/projects/project-1.png",
       "deploymentUrl": "",
@@ -310,60 +310,53 @@
   ],
   "contact": {
     "heading": "Contact Me",
-    "subheading": "Open to placement opportunities, internships, and cloud or AI/ML projects.",
-    "email": "payoshnee.joshi@portfolio.dev",
-    "phone": "+91 00000 00000",
-    "location": "India",
+    "subheading": "Open to freelance projects, collaborations, internships, and product engineering opportunities.",
+    "email": "alex.carter@example.dev",
+    "phone": "+1 000 000 0000",
+    "location": "Remote",
     "buttonLabel": "Send message"
   },
   "certifications": [
     {
-      "title": "AWS Cloud Foundations",
-      "issuer": "AWS Academy",
+      "title": "Cloud Foundations",
+      "issuer": "Demo Academy",
       "date": "2026",
       "credentialUrl": "",
       "description": "Cloud fundamentals, compute, storage, networking, and security basics."
     },
     {
       "title": "Machine Learning Basics",
-      "issuer": "Online Certification",
+      "issuer": "Demo Learning",
       "date": "2026",
       "credentialUrl": "",
       "description": "Core ML concepts, model training workflow, and evaluation fundamentals."
-    },
-    {
-      "title": "Aws cloude",
-      "issuer": "hms",
-      "date": "10/09/2004",
-      "credentialUrl": "hhd",
-      "description": "hdhd"
     }
   ],
   "experiences": [
     {
-      "role": "Cloud and AI/ML Learner",
-      "company": "Placement Portfolio",
+      "role": "Full Stack Developer",
+      "company": "Demo Studio",
       "period": "2026",
-      "location": "India",
-      "description": "Building portfolio projects around cloud systems, AI/ML workflows, and production-ready web applications.",
+      "location": "Remote",
+      "description": "Building portfolio projects around modern web applications, cloud systems, and AI-powered user experiences.",
       "highlights": [
         "Created a dynamic portfolio CMS",
-        "Built animated hero and section navigation",
-        "Practiced cloud and AI/ML project documentation"
+        "Built animated project and skill sections",
+        "Documented deployment-ready content workflows"
       ]
     }
   ],
   "achievements": [
     {
-      "title": "Built a Dynamic Portfolio CMS",
+      "title": "Built a Reusable Portfolio CMS",
       "date": "2026",
-      "description": "Created a custom admin dashboard to manage portfolio content, projects, skills, SEO, and settings.",
+      "description": "Created a custom admin dashboard for editing profile content, projects, skills, SEO, and settings.",
       "link": ""
     },
     {
-      "title": "Cloud and AI/ML Portfolio Launch",
+      "title": "Launched a Cloud-Ready Portfolio Demo",
       "date": "2026",
-      "description": "Designed a placement-ready portfolio with animated sections and project-based skill mapping.",
+      "description": "Designed a portfolio experience with animated sections, project details, and database-backed CMS content.",
       "link": ""
     }
   ],
@@ -380,38 +373,38 @@
     {
       "name": "GitHub",
       "icon": "github",
-      "link": "https://github.com/payoshnee-joshi"
+      "link": "https://github.com/demo-user"
     },
     {
       "name": "LinkedIn",
       "icon": "linkedin",
-      "link": "https://www.linkedin.com/in/payoshnee-joshi"
+      "link": "https://www.linkedin.com/in/demo-user"
     },
     {
       "name": "LeetCode",
       "icon": "leetcode",
-      "link": "https://leetcode.com/u/payoshnee-joshi"
+      "link": "https://leetcode.com/u/demo-user"
     }
   ],
   "footer": {
-    "copyrightName": "Payoshnee Joshi",
+    "copyrightName": "Alex Carter",
     "columns": [
       {
         "title": "Social Media",
         "links": [
           {
             "name": "GitHub",
-            "link": "https://github.com/payoshnee-joshi",
+            "link": "https://github.com/demo-user",
             "icon": "github"
           },
           {
             "name": "LinkedIn",
-            "link": "https://www.linkedin.com/in/payoshnee-joshi",
+            "link": "https://www.linkedin.com/in/demo-user",
             "icon": "linkedin"
           },
           {
             "name": "LeetCode",
-            "link": "https://leetcode.com/u/payoshnee-joshi",
+            "link": "https://leetcode.com/u/demo-user",
             "icon": "leetcode"
           }
         ]

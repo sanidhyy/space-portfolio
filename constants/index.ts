@@ -1,6 +1,6 @@
 export const PORTFOLIO_OWNER = {
-  name: "Payoshnee Joshi",
-  role: "Cloud and AI/ML Engineer",
+  name: "Alex Carter",
+  role: "Full Stack Developer",
   location: "India",
 };
 
@@ -16,7 +16,7 @@ export const NAV_LINKS = [
 ] as const;
 
 export const LINKS = {
-  github: "https://github.com/payoshnee-joshi",
-  linkedin: "https://www.linkedin.com/in/payoshnee-joshi",
-  leetcode: "https://leetcode.com/u/payoshnee-joshi",
+  github: "https://github.com/demo-user",
+  linkedin: "https://www.linkedin.com/in/demo-user",
+  leetcode: "https://leetcode.com/u/demo-user",
 };

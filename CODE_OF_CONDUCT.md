@@ -1,5 +1,5 @@
 # Code of Conduct
 
-This repository is maintained as a personal portfolio project for Payoshnee Joshi.
+Contributors and maintainers are expected to keep discussions respectful, constructive, and professional.
 
-Anyone reviewing, contributing to, or discussing this project should be respectful, constructive, and professional. Feedback is welcome when it helps improve the portfolio, code quality, accessibility, security, or deployment readiness.
+Feedback is welcome when it helps improve the portfolio, CMS workflow, accessibility, security, deployment readiness, or documentation. Personal attacks, harassment, and disclosure of private information are not acceptable.

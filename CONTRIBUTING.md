@@ -1,6 +1,6 @@
 # Contributing
 
-This is a custom portfolio for Payoshnee Joshi.
+Thanks for helping improve Space Portfolio.
 
 ## Development
 
@@ -23,8 +23,8 @@ npm run lint
 npm run build
 ```
 
-## Content Changes
+## CMS And Demo Content
 
 Prefer using the admin dashboard at `/admin` for portfolio content, project data, SEO, skills, blogs, achievements, and settings.
 
-Only edit `data/cms.json` directly when a browser-based edit is not convenient.
+Only edit `data/cms.json` directly when a browser-based edit is not convenient. Keep seeded demo content generic and do not commit private credentials, personal API keys, or private profile links.

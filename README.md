@@ -1,21 +1,29 @@
-# Payoshnee Joshi Portfolio
+# Space Portfolio
 
-A custom portfolio for Payoshnee Joshi, focused on cloud engineering, AI/ML, projects, skills, achievements, certifications, experience, blogs, and placement-ready presentation.
+A modern space-themed portfolio built with Next.js, React, TypeScript, Tailwind CSS, Three.js, Framer Motion, and React Icons.
 
-This project is a custom portfolio application with a CMS-style admin dashboard, animated hero section, rocket-stage navigation, project popups, skill filters, SEO settings, and editable content stored in Supabase for production.
+This version includes a reusable CMS-style admin dashboard so portfolio owners can manage hero content, skills, certifications, experience, achievements, blogs, projects, contact details, social links, footer data, uploads, and SEO metadata without editing component code.
 
 ## Features
 
-- Animated space-themed portfolio homepage
+- Animated space-themed homepage
 - CMS-backed hero content and animated hero skill icons
-- Skills section with icon hover mode and optional graph mode
+- Rocket-stage navigation that highlights completed sections
+- Skills section with icon hover mode, graph mode, and category filters
 - Project cards with cover images, highlights, source links, deployment links, and detailed popups
 - Project tech-stack usage graph
-- Certifications, experience, achievements, blogs, contact, footer, and social media sections
-- Rocket-stage navbar with completed-section highlighting
-- SEO metadata controlled from CMS content
-- Admin dashboard for editing content from the browser
-- Image upload API for icons, project covers, favicon, and SEO images
+- Certifications, experience, achievements, blogs, contact, custom sections, and footer
+- Admin dashboard at `/admin`
+- API routes for CMS reads/writes and uploads
+- Supabase database support for persistent CMS data
+- Supabase Storage support for persistent uploaded assets
+- Local JSON fallback for development
+- Vercel cron keep-alive endpoint
+- SEO metadata generated from CMS content
+
+## Demo Content
+
+The included CMS seed uses a fictional profile named **Alex Carter**. Replace it from `/admin` or by editing `data/cms.json`.
 
 ## Tech Stack
 
@@ -24,43 +32,11 @@ This project is a custom portfolio application with a CMS-style admin dashboard,
 - TypeScript
 - Tailwind CSS
 - Framer Motion
-- React Icons
 - Three.js and React Three Fiber
-- Supabase database and storage CMS backend
+- React Icons
+- Supabase
 
-## Admin Dashboard
-
-Open the admin panel at:
-
-```bash
-http://localhost:3000/admin
-```
-
-Default local password:
-
-```bash
-portfolio-admin
-```
-
-For production, set:
-
-```bash
-ADMIN_PASSWORD=your-secure-password
-```
-
-In production, CMS content is saved in Supabase. Locally, if Supabase env vars are missing, the app falls back to:
-
-```bash
-data/cms.json
-```
-
-In production, uploaded files are saved in Supabase Storage. Local fallback uploads are saved in:
-
-```bash
-public/uploads
-```
-
-## Local Development
+## Getting Started
 
 Install dependencies:
 
@@ -74,39 +50,62 @@ Start the development server:
 npm run dev
 ```
 
-Run checks:
+Open:
+
+```bash
+http://localhost:3000
+http://localhost:3000/admin
+```
+
+Default local admin password:
+
+```bash
+portfolio-admin
+```
+
+Set `ADMIN_PASSWORD` in production.
+
+## CMS Storage
+
+Without Supabase environment variables, the app reads and writes local CMS data at:
+
+```bash
+data/cms.json
+```
+
+With Supabase configured, CMS data is stored in the `cms_content` table and uploads are stored in the `portfolio-uploads` bucket.
+
+## Supabase Setup
+
+Run the SQL in:
+
+```bash
+supabase/schema.sql
+```
+
+Then set:
+
+```bash
+ADMIN_PASSWORD=your-secure-password
+SUPABASE_URL=https://your-project.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+SUPABASE_CMS_TABLE=cms_content
+SUPABASE_UPLOAD_BUCKET=portfolio-uploads
+```
+
+Keep `SUPABASE_SERVICE_ROLE_KEY` server-only.
+
+## Vercel
+
+The app can be deployed to Vercel. The included `vercel.json` schedules `/api/keep-alive` once per day, which is compatible with Vercel Hobby accounts.
+
+## Checks
 
 ```bash
 npm run lint
 npm run build
 ```
 
-## Supabase Setup
+## Contributing
 
-Create a Supabase project, then run the SQL in:
-
-```bash
-supabase/schema.sql
-```
-
-Set these environment variables in Vercel:
-
-```bash
-SUPABASE_URL=your-project-url
-SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
-SUPABASE_CMS_TABLE=cms_content
-SUPABASE_UPLOAD_BUCKET=portfolio-uploads
-ADMIN_PASSWORD=your-secure-password
-```
-
-Keep `SUPABASE_SERVICE_ROLE_KEY` secret. Do not expose it in client-side code.
-
-## Deployment
-
-Deploy the repo to Vercel. The app includes a Vercel cron that calls `/api/keep-alive` every 6 hours to touch the app and CMS database.
-
-Supabase free data remains stored even if the database pauses. The keep-alive route helps reduce inactivity, but provider free-plan limits can still apply.
-
-## Content Ownership
-
-All visible portfolio content is managed for Payoshnee Joshi through the CMS data and admin dashboard. Update real project URLs, social links, email address, deployment links, and credentials from `/admin` before publishing.
+Issues and pull requests are welcome. When contributing, keep demo content generic and avoid committing personal credentials or private links.

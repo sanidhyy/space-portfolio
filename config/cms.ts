@@ -60,11 +60,11 @@ type FooterLink = {
 
 export const cms = {
   seo: {
-    title: "Payoshnee Joshi | Cloud and AI/ML Engineer",
+    title: "Alex Carter | Full Stack Developer",
     description:
-      "Portfolio of Payoshnee Joshi, a Cloud and AI/ML Engineer building reliable cloud systems, intelligent applications, and production-ready machine learning solutions.",
+      "Portfolio of Alex Carter, a fictional full stack developer building cloud-ready web applications, AI features, and polished product experiences.",
     keywords: [
-      "Payoshnee Joshi",
+      "Alex Carter",
       "Cloud Engineer",
       "AI Engineer",
       "ML Engineer",
@@ -75,7 +75,7 @@ export const cms = {
     ],
     favicon: "/favicon.ico",
     image: "/projects/project-1.png",
-    url: "https://payoshnee-joshi-portfolio.vercel.app",
+    url: "https://space-portfolio-demo.vercel.app",
   },
   navSections: [
     { id: "about-me", title: "About me", enabled: true },
@@ -84,10 +84,10 @@ export const cms = {
     { id: "projects", title: "Projects", enabled: true },
   ] satisfies NavSection[],
   hero: {
-    badge: "Cloud and AI/ML Portfolio",
+    badge: "Full Stack Developer Portfolio",
     titlePrefix: "Hi my name is",
-    titleHighlight: "Payoshnee Joshi",
-    subtitle: "Cloud and AI/ML Engineer.",
+    titleHighlight: "Alex Carter",
+    subtitle: "Full Stack Developer.",
     cta: {
       label: "Know more about me",
       href: "#blogs",
@@ -208,19 +208,19 @@ export const cms = {
     body: string;
   }>,
   socials: [
-    { name: "GitHub", icon: "github", link: "https://github.com/payoshnee-joshi" },
-    { name: "LinkedIn", icon: "linkedin", link: "https://www.linkedin.com/in/payoshnee-joshi" },
-    { name: "LeetCode", icon: "leetcode", link: "https://leetcode.com/u/payoshnee-joshi" },
+    { name: "GitHub", icon: "github", link: "https://github.com/demo-user" },
+    { name: "LinkedIn", icon: "linkedin", link: "https://www.linkedin.com/in/demo-user" },
+    { name: "LeetCode", icon: "leetcode", link: "https://leetcode.com/u/demo-user" },
   ] satisfies Array<{ name: string; icon: IconKey; link: string }>,
   footer: {
-    copyrightName: "Payoshnee Joshi",
+    copyrightName: "Alex Carter",
     columns: [
       {
         title: "Social Media",
         links: [
-          { name: "GitHub", link: "https://github.com/payoshnee-joshi", icon: "github" },
-          { name: "LinkedIn", link: "https://www.linkedin.com/in/payoshnee-joshi", icon: "linkedin" },
-          { name: "LeetCode", link: "https://leetcode.com/u/payoshnee-joshi", icon: "leetcode" },
+          { name: "GitHub", link: "https://github.com/demo-user", icon: "github" },
+          { name: "LinkedIn", link: "https://www.linkedin.com/in/demo-user", icon: "linkedin" },
+          { name: "LeetCode", link: "https://leetcode.com/u/demo-user", icon: "leetcode" },
         ] satisfies FooterLink[],
       },
       {

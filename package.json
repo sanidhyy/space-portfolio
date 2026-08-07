@@ -1,5 +1,5 @@
 {
-  "name": "payoshnee-joshi-portfolio",
+  "name": "space-portfolio",
   "version": "1.0.1",
   "private": true,
   "scripts": {
@@ -9,15 +9,16 @@
     "lint": "eslint ."
   },
   "author": {
-    "name": "Payoshnee Joshi"
+    "name": "Sanidhya Kumar Verma",
+    "url": "https://github.com/sanidhyy"
   },
-  "description": "Custom CMS-powered portfolio for Payoshnee Joshi, focused on cloud engineering, AI/ML, projects, achievements, and placement readiness.",
+  "description": "Modern space-themed portfolio with a CMS admin dashboard, Supabase persistence, animations, and SEO-ready content.",
   "keywords": [
     "reactjs",
     "nextjs",
     "vercel",
     "react",
-    "payoshnee-joshi-portfolio",
+    "space-portfolio",
     "portfolio",
     "react-icons",
     "cn",
@@ -44,7 +45,14 @@
     "css"
   ],
   "license": "MIT",
-  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sanidhyy/space-portfolio"
+  },
+  "homepage": "https://github.com/sanidhyy/space-portfolio#readme",
+  "bugs": {
+    "url": "https://github.com/sanidhyy/space-portfolio/issues"
+  },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@react-three/drei": "^10.7.7",
