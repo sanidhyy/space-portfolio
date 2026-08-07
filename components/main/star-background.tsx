@@ -12,8 +12,8 @@ import type { Points as PointsType } from "three";
 
 export const StarBackground = (props: PointsInstancesProps) => {
   const ref = useRef<PointsType | null>(null);
-  const [sphere] = useState(() =>
-    random.inSphere(new Float32Array(5000), { radius: 1.2 }),
+  const [sphere] = useState<Float32Array>(() =>
+    random.inSphere(new Float32Array(5000 * 3), { radius: 1.2 }) as Float32Array,
   );
 
   useFrame((_state, delta) => {
@@ -28,7 +28,7 @@ export const StarBackground = (props: PointsInstancesProps) => {
       <Points
         ref={ref}
         stride={3}
-        positions={new Float32Array(sphere)}
+        positions={sphere}
         frustumCulled
         {...props}
       >

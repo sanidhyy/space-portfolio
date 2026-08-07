@@ -1,183 +1,92 @@
-<a name="readme-top"></a>
+# Payoshnee Joshi Portfolio
 
-# Modern Space Theme Portfolio using Next.js 14 and Three.js
+A custom portfolio for Payoshnee Joshi, focused on cloud engineering, AI/ML, projects, skills, achievements, certifications, experience, blogs, and placement-ready presentation.
 
-![Modern Space Theme Portfolio using Next.js 14 and Three.js](/.github/images/img_main.png "Modern Space Theme Portfolio using Next.js 14 and Three.js")
+This project is a custom portfolio application with a CMS-style admin dashboard, animated hero section, rocket-stage navigation, project popups, skill filters, SEO settings, and editable content stored in local JSON.
 
-[![Ask Me Anything!](https://flat.badgen.net/static/Ask%20me/anything?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy "Ask Me Anything!")
-[![GitHub license](https://flat.badgen.net/github/license/sanidhyy/space-portfolio?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/space-portfolio/blob/main/LICENSE "GitHub license")
-[![Maintenance](https://flat.badgen.net/static/Maintained/yes?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/space-portfolio/commits/main "Maintenance")
-[![GitHub branches](https://flat.badgen.net/github/branches/sanidhyy/space-portfolio?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/space-portfolio/branches "GitHub branches")
-[![Github commits](https://flat.badgen.net/github/commits/sanidhyy/space-portfolio?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/space-portfolio/commits "Github commits")
-[![GitHub issues](https://flat.badgen.net/github/issues/sanidhyy/space-portfolio?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/space-portfolio/issues "GitHub issues")
-[![GitHub pull requests](https://flat.badgen.net/github/prs/sanidhyy/space-portfolio?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/space-portfolio/pulls "GitHub pull requests")
-[![Netlify Status](https://api.netlify.com/api/v1/badges/451ed0e0-3541-474e-896a-4987e30a7722/deploy-status)](https://spaceportfolio.netlify.app/ "Netlify Status")
+## Features
 
-<!-- Table of Contents -->
-<details>
+- Animated space-themed portfolio homepage
+- CMS-backed hero content and animated hero skill icons
+- Skills section with icon hover mode and optional graph mode
+- Project cards with cover images, highlights, source links, deployment links, and detailed popups
+- Project tech-stack usage graph
+- Certifications, experience, achievements, blogs, contact, footer, and social media sections
+- Rocket-stage navbar with completed-section highlighting
+- SEO metadata controlled from CMS content
+- Admin dashboard for editing content from the browser
+- Image upload API for icons, project covers, favicon, and SEO images
 
-<summary>
+## Tech Stack
 
-# :notebook_with_decorative_cover: Table of Contents
+- Next.js App Router
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- React Icons
+- Three.js and React Three Fiber
+- Local JSON CMS backend
 
-</summary>
+## Admin Dashboard
 
-- [Folder Structure](#bangbang-folder-structure)
-- [Getting Started](#toolbox-getting-started)
-- [Screenshots](#camera-screenshots)
-- [Tech Stack](#gear-tech-stack)
-- [Stats](#wrench-stats)
-- [Contribute](#raised_hands-contribute)
-- [Acknowledgements](#gem-acknowledgements)
-- [Buy Me a Coffee](#coffee-buy-me-a-coffee)
-- [Follow Me](#rocket-follow-me)
-- [Learn More](#books-learn-more)
-- [Deploy on Vercel](#page_with_curl-deploy-on-vercel)
-- [Give A Star](#star-give-a-star)
-- [Star History](#star2-star-history)
-- [Give A Star](#star-give-a-star)
+Open the admin panel at:
 
-</details>
-
-## :bangbang: Folder Structure
-
-Here is the folder structure of this app.
-
-<!--- FOLDER_STRUCTURE_START --->
 ```bash
-space-portfolio/
-  |- app/
-    |-- apple-icon.png
-    |-- favicon.ico
-    |-- globals.css
-    |-- icon1.png
-    |-- icon2.png
-    |-- layout.tsx
-    |-- page.tsx
-  |- components/
-    |-- main/
-    |-- sub/
-  |- config/
-    |-- index.ts
-  |- constants/
-    |-- index.ts
-  |- lib/
-    |-- motion.ts
-    |-- utils.ts
-  |- public/
-  |- .eslintrc.json
-  |- .gitignore
-  |- eslint.config.mjs
-  |- netlify.toml
-  |- next.config.js
-  |- package-lock.json
-  |- package.json
-  |- postcss.config.js
-  |- tailwind.config.ts
-  |- tsconfig.json
+http://localhost:3000/admin
 ```
-<!--- FOLDER_STRUCTURE_END --->
 
-<br />
+Default local password:
 
-## :toolbox: Getting Started
+```bash
+portfolio-admin
+```
 
-1. Make sure **Git** and **NodeJS** is installed.
+For production, set:
 
-2. Clone this repository to your local computer.
+```bash
+ADMIN_PASSWORD=your-secure-password
+```
 
-3. Open terminal in root directory. Run `npm install --legacy-peer-deps` or `yarn install --legacy-peer-deps`.
+The CMS content is saved in:
 
-4. Now app is fully configured 👍 and you can start using this app using `npm run dev` or `yarn dev`.
+```bash
+data/cms.json
+```
 
-## :camera: Screenshots:
+Uploaded files are saved in:
 
-![Modern UI/UX](/.github/images/img1.png "Modern UI/UX")
+```bash
+public/uploads
+```
 
-![Showcase your skills](/.github/images/img2.png "Showcase your skills")
+## Local Development
 
-![Built with Typescript](/.github/images/img3.png "Built with Typescript")
+Install dependencies:
 
-![Showcase your projects](/.github/images/img4.png "Showcase your projects")
+```bash
+npm install
+```
 
-## :gear: Tech Stack
+Start the development server:
 
-[![React JS](https://skillicons.dev/icons?i=react "React JS")](https://react.dev/ "React JS") [![Next JS](https://skillicons.dev/icons?i=next "Next JS")](https://nextjs.org/ "Next JS") [![Typescript](https://skillicons.dev/icons?i=ts "Typescript")](https://www.typescriptlang.org/ "Typescript") [![Tailwind CSS](https://skillicons.dev/icons?i=tailwind "Tailwind CSS")](https://tailwindcss.com/ "Tailwind CSS") [![Netlify](https://skillicons.dev/icons?i=netlify "Netlify")](https://netlify.app/ "Netlify") [![Three.js](https://skillicons.dev/icons?i=threejs "Three.js")](https://threejs.org/ "Three.js")
+```bash
+npm run dev
+```
 
-## :wrench: Stats
+Run checks:
 
-[![Stats for Space Portfolio](/.github/images/stats.svg "Stats for Space Portfolio")](https://pagespeed.web.dev/analysis/https-spaceportfolio-netlify-app/2efbmg117d "Stats for Space Portfolio")
+```bash
+npm run lint
+npm run build
+```
 
-## :raised_hands: Contribute
+## Deployment
 
-You might encounter some bugs while using this app. You are more than welcome to contribute. Just submit changes via pull request and I will review them before merging. Make sure you follow community guidelines.
+This app uses API routes and local JSON file writes for the admin CMS. It works best on a server where the filesystem can persist changes, such as a VPS or Render.
 
-## :gem: Acknowledgements
+For Vercel, the public portfolio can run, but local JSON writes are not reliable long-term on serverless storage. Use an external database or storage provider before treating the admin panel as production content management on Vercel.
 
-Useful resources and dependencies that are used in Space Portfolio.
+## Content Ownership
 
-<!--- DEPENDENCIES_START --->
-- [@heroicons/react](https://www.npmjs.com/package/@heroicons/react): ^2.2.0
-- [@react-three/drei](https://www.npmjs.com/package/@react-three/drei): ^10.7.7
-- [@react-three/fiber](https://www.npmjs.com/package/@react-three/fiber): ^9.7.0
-- [@types/node](https://www.npmjs.com/package/@types/node): ^26
-- [@types/react](https://www.npmjs.com/package/@types/react): 19.2.18
-- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): 19.2.4
-- [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.5.4
-- [clsx](https://www.npmjs.com/package/clsx): ^2.1.1
-- [eslint](https://www.npmjs.com/package/eslint): ^10.8.0
-- [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 16.2.12
-- [framer-motion](https://www.npmjs.com/package/framer-motion): ^12.43.0
-- [next](https://www.npmjs.com/package/next): 16.2.12
-- [postcss](https://www.npmjs.com/package/postcss): ^8
-- [react](https://www.npmjs.com/package/react): 19.2.8
-- [react-dom](https://www.npmjs.com/package/react-dom): 19.2.8
-- [react-icons](https://www.npmjs.com/package/react-icons): ^5.7.0
-- [react-intersection-observer](https://www.npmjs.com/package/react-intersection-observer): ^11.0.0
-- [tailwind-merge](https://www.npmjs.com/package/tailwind-merge): ^3.6.0
-- [tailwindcss](https://www.npmjs.com/package/tailwindcss): ^3.3.0
-- [three](https://www.npmjs.com/package/three): ^0.185.1
-- [typescript](https://www.npmjs.com/package/typescript): ^6
-
-<!--- DEPENDENCIES_END --->
-
-## :coffee: Buy Me a Coffee
-
-[<img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" width="200" />](https://www.buymeacoffee.com/sanidhy "Buy me a Coffee")
-
-## :rocket: Follow Me
-
-[![GitHub followers](https://img.shields.io/github/followers/sanidhyy?style=social&label=Follow&maxAge=2592000)](https://github.com/sanidhyy "Follow Me")
-[![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fx.com%2F_sanidhyy)](https://x.com/intent/tweet?text=Check+out+this+amazing+app:&url=https%3A%2F%2Fgithub.com%2Fsanidhyy%2Fspace-portfolio "Tweet")
-
-## :books: Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## :page_with_curl: Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-## :star: Give A Star
-
-You can also give this repository a star to show more people and they can use this repository.
-
-## :star2: Star History
-
-<a href="https://star-history.com/#sanidhyy/space-portfolio&Timeline">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=sanidhyy/space-portfolio&type=Timeline&theme=dark" />
-  <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=sanidhyy/space-portfolio&type=Timeline" />
-  <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=sanidhyy/space-portfolio&type=Timeline" />
-</picture>
-</a>
-
-<br />
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+All visible portfolio content is managed for Payoshnee Joshi through the CMS data and admin dashboard. Update real project URLs, social links, email address, deployment links, and credentials from `/admin` before publishing.

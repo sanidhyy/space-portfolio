@@ -1,8 +1,13 @@
 import { HeroContent } from "@/components/sub/hero-content";
+import type { CmsData } from "@/lib/cms-shared";
 
-export const Hero = () => {
+type HeroProps = {
+  cms: CmsData;
+};
+
+export const Hero = ({ cms }: HeroProps) => {
   return (
-    <div className="relative flex flex-col h-full w-full">
+    <section id="about-me" className="relative flex flex-col h-full w-full">
       <video
         autoPlay
         muted
@@ -12,7 +17,7 @@ export const Hero = () => {
         <source src="/videos/blackhole.webm" type="video/webm" />
       </video>
 
-      <HeroContent />
-    </div>
+      <HeroContent cms={cms} />
+    </section>
   );
 };

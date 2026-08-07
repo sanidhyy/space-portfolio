@@ -1,21 +1,11 @@
 # Security Policy
 
-## Supported Versions
+This is a personal portfolio project for Payoshnee Joshi.
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+## Admin Access
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+The admin dashboard is protected with the `ADMIN_PASSWORD` environment variable. The local fallback password is only for development and should be changed before deployment.
 
-## Reporting a Vulnerability
+## Reporting Issues
 
-Use this section to tell people how to report a vulnerability.
-
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+For security or privacy issues, contact the project owner directly before sharing details publicly.

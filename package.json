@@ -1,5 +1,5 @@
 {
-  "name": "space-portfolio",
+  "name": "payoshnee-joshi-portfolio",
   "version": "1.0.1",
   "private": true,
   "scripts": {
@@ -9,17 +9,15 @@
     "lint": "eslint ."
   },
   "author": {
-    "name": "Sanidhya Kumar Verma",
-    "email": "sanidhya.verma12345@gmail.com",
-    "url": "https://github.com/sanidhyy"
+    "name": "Payoshnee Joshi"
   },
-  "description": "Welcome to my full stack Next.js 14 space portfolio.",
+  "description": "Custom CMS-powered portfolio for Payoshnee Joshi, focused on cloud engineering, AI/ML, projects, achievements, and placement readiness.",
   "keywords": [
     "reactjs",
     "nextjs",
     "vercel",
     "react",
-    "space-portfolio",
+    "payoshnee-joshi-portfolio",
     "portfolio",
     "react-icons",
     "cn",
@@ -46,25 +44,7 @@
     "css"
   ],
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/sanidhyy/space-portfolioit"
-  },
-  "homepage": "https://github.com/sanidhyy/space-portfolio#readme",
-  "bugs": {
-    "url": "https://github.com/sanidhyy/space-portfolio/issues",
-    "email": "sanidhya.verma12345@gmail.com"
-  },
-  "funding": [
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/sanidhy"
-    },
-    {
-      "type": "Buy me a coffee",
-      "url": "https://www.buymeacoffee.com/sanidhy"
-    }
-  ],
+  "homepage": "",
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@react-three/drei": "^10.7.7",
@@ -84,7 +64,7 @@
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.4",
     "autoprefixer": "^10.5.4",
-    "eslint": "^10.8.0",
+    "eslint": "^9.39.5",
     "eslint-config-next": "16.2.12",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",

@@ -2,23 +2,28 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import type { PropsWithChildren } from "react";
 
-import { Footer } from "@/components/main/footer";
-import { Navbar } from "@/components/main/navbar";
+import { SiteShell } from "@/components/main/site-shell";
 import { StarsCanvas } from "@/components/main/star-background";
-import { siteConfig } from "@/config";
+import { createSiteMetadata, readCms } from "@/lib/cms-store";
 import { cn } from "@/lib/utils";
 
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+export const dynamic = "force-dynamic";
+
 export const viewport: Viewport = {
   themeColor: "#030014",
 };
 
-export const metadata: Metadata = siteConfig;
+export async function generateMetadata(): Promise<Metadata> {
+  return createSiteMetadata(await readCms());
+}
 
-export default function RootLayout({ children }: PropsWithChildren) {
+export default async function RootLayout({ children }: PropsWithChildren) {
+  const cms = await readCms();
+
   return (
     <html lang="en">
       <body
@@ -28,9 +33,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
         )}
       >
         <StarsCanvas />
-        <Navbar />
-        {children}
-        <Footer />
+        <SiteShell cms={cms}>{children}</SiteShell>
       </body>
     </html>
   );
