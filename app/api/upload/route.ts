@@ -3,6 +3,11 @@ import { promises as fs } from "node:fs";
 import path from "node:path";
 
 import { isAdminPassword } from "@/lib/cms-store";
+import {
+  getSupabaseAdmin,
+  isSupabaseConfigured,
+  uploadBucketName,
+} from "@/lib/supabase-server";
 
 const uploadDir = path.join(process.cwd(), "public", "uploads");
 
@@ -26,6 +31,30 @@ export async function POST(request: NextRequest) {
     .replace(/(^-|-$)/g, "");
   const filename = `${safeName || "upload"}-${Date.now()}${extension}`;
   const bytes = Buffer.from(await file.arrayBuffer());
+
+  if (isSupabaseConfigured()) {
+    const supabase = getSupabaseAdmin();
+    const uploadPath = `cms/${filename}`;
+    const { error } = await supabase.storage
+      .from(uploadBucketName)
+      .upload(uploadPath, bytes, {
+        contentType: file.type || "application/octet-stream",
+        upsert: false,
+      });
+
+    if (error) {
+      return NextResponse.json(
+        { message: `Supabase upload failed: ${error.message}` },
+        { status: 500 }
+      );
+    }
+
+    const { data } = supabase.storage
+      .from(uploadBucketName)
+      .getPublicUrl(uploadPath);
+
+    return NextResponse.json({ url: data.publicUrl });
+  }
 
   await fs.mkdir(uploadDir, { recursive: true });
   await fs.writeFile(path.join(uploadDir, filename), bytes);

@@ -2,7 +2,7 @@
 
 A custom portfolio for Payoshnee Joshi, focused on cloud engineering, AI/ML, projects, skills, achievements, certifications, experience, blogs, and placement-ready presentation.
 
-This project is a custom portfolio application with a CMS-style admin dashboard, animated hero section, rocket-stage navigation, project popups, skill filters, SEO settings, and editable content stored in local JSON.
+This project is a custom portfolio application with a CMS-style admin dashboard, animated hero section, rocket-stage navigation, project popups, skill filters, SEO settings, and editable content stored in Supabase for production.
 
 ## Features
 
@@ -26,7 +26,7 @@ This project is a custom portfolio application with a CMS-style admin dashboard,
 - Framer Motion
 - React Icons
 - Three.js and React Three Fiber
-- Local JSON CMS backend
+- Supabase database and storage CMS backend
 
 ## Admin Dashboard
 
@@ -48,13 +48,13 @@ For production, set:
 ADMIN_PASSWORD=your-secure-password
 ```
 
-The CMS content is saved in:
+In production, CMS content is saved in Supabase. Locally, if Supabase env vars are missing, the app falls back to:
 
 ```bash
 data/cms.json
 ```
 
-Uploaded files are saved in:
+In production, uploaded files are saved in Supabase Storage. Local fallback uploads are saved in:
 
 ```bash
 public/uploads
@@ -81,11 +81,31 @@ npm run lint
 npm run build
 ```
 
+## Supabase Setup
+
+Create a Supabase project, then run the SQL in:
+
+```bash
+supabase/schema.sql
+```
+
+Set these environment variables in Vercel:
+
+```bash
+SUPABASE_URL=your-project-url
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+SUPABASE_CMS_TABLE=cms_content
+SUPABASE_UPLOAD_BUCKET=portfolio-uploads
+ADMIN_PASSWORD=your-secure-password
+```
+
+Keep `SUPABASE_SERVICE_ROLE_KEY` secret. Do not expose it in client-side code.
+
 ## Deployment
 
-This app uses API routes and local JSON file writes for the admin CMS. It works best on a server where the filesystem can persist changes, such as a VPS or Render.
+Deploy the repo to Vercel. The app includes a Vercel cron that calls `/api/keep-alive` every 6 hours to touch the app and CMS database.
 
-For Vercel, the public portfolio can run, but local JSON writes are not reliable long-term on serverless storage. Use an external database or storage provider before treating the admin panel as production content management on Vercel.
+Supabase free data remains stored even if the database pauses. The keep-alive route helps reduce inactivity, but provider free-plan limits can still apply.
 
 ## Content Ownership
 
