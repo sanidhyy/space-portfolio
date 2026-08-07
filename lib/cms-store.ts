@@ -31,11 +31,18 @@ export async function readCms(): Promise<CmsData> {
   }
 
   const supabase = getSupabaseAdmin();
-  const { data, error } = await supabase
-    .from(cmsTableName)
-    .select("content")
-    .eq("id", cmsRowId)
-    .maybeSingle();
+  const result = await withSupabaseJwtRetry(async () =>
+    supabase
+      .from(cmsTableName)
+      .select("content")
+      .eq("id", cmsRowId)
+      .maybeSingle()
+  );
+  const { error } = result;
+  const data =
+    "data" in result
+      ? (result.data as { content?: unknown } | null)
+      : null;
 
   if (error) {
     console.error("Supabase CMS read failed", error);
@@ -65,11 +72,13 @@ function isCmsData(value: unknown): value is CmsData {
 export async function writeCms(data: CmsData) {
   if (isSupabaseConfigured()) {
     const supabase = getSupabaseAdmin();
-    const { error } = await supabase.from(cmsTableName).upsert({
-      id: cmsRowId,
-      content: data,
-      updated_at: new Date().toISOString(),
-    });
+    const { error } = await withSupabaseJwtRetry(async () =>
+      supabase.from(cmsTableName).upsert({
+        id: cmsRowId,
+        content: data,
+        updated_at: new Date().toISOString(),
+      })
+    );
 
     if (error) {
       throw new Error(`Supabase CMS save failed: ${error.message}`);
@@ -80,6 +89,32 @@ export async function writeCms(data: CmsData) {
 
   await fs.mkdir(path.dirname(cmsPath), { recursive: true });
   await fs.writeFile(cmsPath, `${JSON.stringify(data, null, 2)}\n`);
+}
+
+type SupabaseResult = {
+  error: { code?: string; message?: string } | null;
+};
+
+async function withSupabaseJwtRetry<T>(
+  operation: () => Promise<T & SupabaseResult>
+): Promise<T & SupabaseResult> {
+  const result = await operation();
+
+  if (!isJwtIssuedAtFutureError(result.error)) {
+    return result;
+  }
+
+  await new Promise((resolve) => setTimeout(resolve, 2000));
+  return operation();
+}
+
+function isJwtIssuedAtFutureError(
+  error: { code?: string; message?: string } | null
+) {
+  return (
+    error?.code === "PGRST303" ||
+    error?.message?.toLowerCase().includes("jwt issued at future")
+  );
 }
 
 export function createSiteMetadata(data: CmsData): Metadata {

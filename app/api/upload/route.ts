@@ -35,12 +35,12 @@ export async function POST(request: NextRequest) {
   if (isSupabaseConfigured()) {
     const supabase = getSupabaseAdmin();
     const uploadPath = `cms/${filename}`;
-    const { error } = await supabase.storage
-      .from(uploadBucketName)
-      .upload(uploadPath, bytes, {
+    const { error } = await withSupabaseJwtRetry(async () =>
+      supabase.storage.from(uploadBucketName).upload(uploadPath, bytes, {
         contentType: file.type || "application/octet-stream",
         upsert: false,
-      });
+      })
+    );
 
     if (error) {
       return NextResponse.json(
@@ -60,4 +60,24 @@ export async function POST(request: NextRequest) {
   await fs.writeFile(path.join(uploadDir, filename), bytes);
 
   return NextResponse.json({ url: `/uploads/${filename}` });
+}
+
+type SupabaseResult = {
+  error: { code?: string; message?: string } | null;
+};
+
+async function withSupabaseJwtRetry<T>(
+  operation: () => Promise<T & SupabaseResult>
+): Promise<T & SupabaseResult> {
+  const result = await operation();
+
+  if (
+    result.error?.code !== "PGRST303" &&
+    !result.error?.message?.toLowerCase().includes("jwt issued at future")
+  ) {
+    return result;
+  }
+
+  await new Promise((resolve) => setTimeout(resolve, 2000));
+  return operation();
 }
