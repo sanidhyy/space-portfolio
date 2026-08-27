@@ -130,7 +130,7 @@ Useful resources and dependencies that are used in Space Portfolio.
 - [@react-three/fiber](https://www.npmjs.com/package/@react-three/fiber): ^9.7.0
 - [@types/node](https://www.npmjs.com/package/@types/node): ^26
 - [@types/react](https://www.npmjs.com/package/@types/react): 19.2.18
-- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): 19.2.4
+- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): 19.2.5
 - [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.5.4
 - [clsx](https://www.npmjs.com/package/clsx): ^2.1.1
 - [eslint](https://www.npmjs.com/package/eslint): ^10.8.1
