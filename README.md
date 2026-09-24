@@ -136,7 +136,7 @@ Useful resources and dependencies that are used in Space Portfolio.
 - [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.6.0
 - [clsx](https://www.npmjs.com/package/clsx): ^2.1.1
 - [eslint](https://www.npmjs.com/package/eslint): ^10.11.0
-- [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 16.3.3
+- [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 16.3.5
 - [framer-motion](https://www.npmjs.com/package/framer-motion): ^13.2.0
 - [maath](https://www.npmjs.com/package/maath): ^0.10.8
 - [next](https://www.npmjs.com/package/next): 16.3.5
