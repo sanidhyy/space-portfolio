@@ -128,7 +128,7 @@ Useful resources and dependencies that are used in Space Portfolio.
 <!--- DEPENDENCIES_START --->
 - [@heroicons/react](https://www.npmjs.com/package/@heroicons/react): ^2.2.0
 - [@react-three/drei](https://www.npmjs.com/package/@react-three/drei): ^10.7.8
-- [@react-three/fiber](https://www.npmjs.com/package/@react-three/fiber): ^9.7.0
+- [@react-three/fiber](https://www.npmjs.com/package/@react-three/fiber): ^9.8.1
 - [@types/node](https://www.npmjs.com/package/@types/node): ^26
 - [@types/react](https://www.npmjs.com/package/@types/react): 19.2.18
 - [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): 19.2.5
@@ -139,7 +139,7 @@ Useful resources and dependencies that are used in Space Portfolio.
 - [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 16.3.6
 - [framer-motion](https://www.npmjs.com/package/framer-motion): ^13.4.4
 - [maath](https://www.npmjs.com/package/maath): ^0.10.8
-- [next](https://www.npmjs.com/package/next): 16.3.5
+- [next](https://www.npmjs.com/package/next): 16.3.6
 - [postcss](https://www.npmjs.com/package/postcss): ^8
 - [react](https://www.npmjs.com/package/react): 19.2.8
 - [react-dom](https://www.npmjs.com/package/react-dom): 19.2.8
