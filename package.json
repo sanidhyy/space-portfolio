@@ -78,7 +78,7 @@
     "react-icons": "^5.7.0",
     "react-intersection-observer": "^11.0.1",
     "tailwind-merge": "^3.6.0",
-    "three": "^0.186.0"
+    "three": "^0.186.1"
   },
   "devDependencies": {
     "@types/node": "^26",
