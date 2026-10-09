@@ -67,7 +67,7 @@
   ],
   "dependencies": {
     "@heroicons/react": "^2.2.0",
-    "@react-three/drei": "^10.7.8",
+    "@react-three/drei": "^10.7.9",
     "@react-three/fiber": "^9.8.1",
     "clsx": "^2.1.1",
     "framer-motion": "^13.4.4",
