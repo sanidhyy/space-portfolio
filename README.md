@@ -130,8 +130,8 @@ Useful resources and dependencies that are used in Space Portfolio.
 - [@react-three/drei](https://www.npmjs.com/package/@react-three/drei): ^10.7.9
 - [@react-three/fiber](https://www.npmjs.com/package/@react-three/fiber): ^9.8.2
 - [@types/node](https://www.npmjs.com/package/@types/node): ^26
-- [@types/react](https://www.npmjs.com/package/@types/react): 19.2.18
-- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): 19.2.5
+- [@types/react](https://www.npmjs.com/package/@types/react): ^19
+- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): ^19
 - [@types/three](https://www.npmjs.com/package/@types/three): ^0.186.0
 - [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.6.0
 - [clsx](https://www.npmjs.com/package/clsx): ^2.1.1
@@ -141,8 +141,8 @@ Useful resources and dependencies that are used in Space Portfolio.
 - [maath](https://www.npmjs.com/package/maath): ^0.10.8
 - [next](https://www.npmjs.com/package/next): 16.4.2
 - [postcss](https://www.npmjs.com/package/postcss): ^8
-- [react](https://www.npmjs.com/package/react): 19.2.8
-- [react-dom](https://www.npmjs.com/package/react-dom): 19.2.8
+- [react](https://www.npmjs.com/package/react): 19.3.1
+- [react-dom](https://www.npmjs.com/package/react-dom): 19.3.1
 - [react-icons](https://www.npmjs.com/package/react-icons): ^5.7.0
 - [react-intersection-observer](https://www.npmjs.com/package/react-intersection-observer): ^11.0.1
 - [tailwind-merge](https://www.npmjs.com/package/tailwind-merge): ^3.6.0
