@@ -85,7 +85,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/three": "^0.186.0",
-    "autoprefixer": "^10.6.0",
+    "autoprefixer": "^10.6.2",
     "eslint": "^10.13.0",
     "eslint-config-next": "16.4.3",
     "postcss": "^8",
