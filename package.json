@@ -78,13 +78,13 @@
     "react-icons": "^5.7.0",
     "react-intersection-observer": "^11.0.1",
     "tailwind-merge": "^3.6.0",
-    "three": "^0.186.1"
+    "three": "^0.187.0"
   },
   "devDependencies": {
     "@types/node": "^26",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@types/three": "^0.186.0",
+    "@types/three": "^0.187.0",
     "autoprefixer": "^10.6.2",
     "eslint": "^10.13.0",
     "eslint-config-next": "16.4.3",
